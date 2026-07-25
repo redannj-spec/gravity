@@ -384,6 +384,28 @@
         </div>
     </main>
 
+    <!-- Firebase SDK (ES Module 방식으로 추가) -->
+    <script type="module">
+        // 브라우저에서 실행 가능한 CDN 모듈 경로를 사용합니다.
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        
+        // 추가로 사용할 기능이 있다면 위 import 구문 아래에 추가하세요. (예: firebase-firestore.js)
+
+        // Firebase 구성
+        const firebaseConfig = {
+            apiKey: "AIzaSyCEmZXCRODrhNAW3F95VG8loKqekKasz1g",
+            authDomain: "gravity-e80e0.firebaseapp.com",
+            projectId: "gravity-e80e0",
+            storageBucket: "gravity-e80e0.firebasestorage.app",
+            messagingSenderId: "628082091351",
+            appId: "1:628082091351:web:005387cb12f0317d3b0a12"
+        };
+
+        // Firebase 초기화
+        const app = initializeApp(firebaseConfig);
+        console.log("Firebase가 성공적으로 초기화되었습니다.");
+    </script>
+
     <script>
         // --- Navigation Logic ---
         function navigateTo(sectionId) {
